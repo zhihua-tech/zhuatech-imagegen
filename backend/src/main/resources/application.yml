@@ -1,0 +1,7 @@
+# Copyright 2026 上海如静知华信息科技有限公司 · https://www.zhuatech.cn/
+spring.application.name: zhuatech-imagegen
+server.port: ${SERVER_PORT:8080}
+zhuatech.image-gen.provider: ${ZHUATECH_IMAGE_GEN_PROVIDER:local}
+zhuatech.image-gen.base-url: ${ZHUATECH_IMAGE_GEN_BASE_URL:}
+zhuatech.image-gen.model: ${ZHUATECH_IMAGE_GEN_MODEL:text-to-image-provider-model}
+zhuatech.image-gen.api-key: ${ZHUATECH_IMAGE_GEN_API_KEY:}
