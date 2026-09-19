@@ -8,8 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+ */
 @Service
 public class ImageGenService {
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public Result plan(Request request) {
         List<String> checks = new ArrayList<>();
         checks.add(request.brandAuthorized() ? "品牌名称与参考素材授权已确认" : "品牌或参考素材授权未确认");
@@ -31,6 +37,9 @@ public class ImageGenService {
             "LOCAL_PROMPT_PLANNER");
     }
 
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Request(@NotBlank @Size(max = 3000) String prompt,
                           @Size(max = 1000) String negativePrompt,
                           @NotBlank String style,
@@ -39,7 +48,13 @@ public class ImageGenService {
                           @Min(1) @Max(4) int imageCount,
                           boolean brandAuthorized,
                           boolean disclosureEnabled) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Variation(int sequence, String composition, String style, String aspectRatio, String providerPrompt) {}
+    /**
+     * 商业授权或定制开发请微信添加微信号zhuatech或zhuatech2进行咨询。
+     */
     public record Result(String status, int variationCount, List<Variation> variations,
                          List<String> checks, Map<String, Object> providerPayload, String executionMode) {}
 }
