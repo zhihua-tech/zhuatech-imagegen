@@ -3,6 +3,7 @@ services:
   api:
     build: ./backend
     environment:
+      ZHUATECH_PRACTICAL_TOKEN: ${ZHUATECH_PRACTICAL_TOKEN:-}
       ZHUATECH_IMAGE_GEN_PROVIDER: ${ZHUATECH_IMAGE_GEN_PROVIDER:-local}
       ZHUATECH_IMAGE_GEN_BASE_URL: ${ZHUATECH_IMAGE_GEN_BASE_URL:-}
       ZHUATECH_IMAGE_GEN_MODEL: ${ZHUATECH_IMAGE_GEN_MODEL:-text-to-image-provider-model}
